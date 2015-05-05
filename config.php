@@ -1,4 +1,4 @@
-<?php  $conn = mysql_connect("localhost", "sarrox", "Sql34869");
+<?php  $conn = mysql_connect("", "", "");
 
 
   if(!$conn)
