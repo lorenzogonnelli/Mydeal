@@ -1,0 +1,95 @@
+/* CSS BY SALVATORE CAMPAGNESE
+*  © 2015/2016
+*/
+
+#footer{
+width: 100%;
+height: 60px;
+background-color: #000;
+color: #fff;
+text-decoration: #f00;
+position:absolute;
+bottom:0;
+}
+
+
+#header{
+width: 100%;
+height: 60px;
+background-color: #000;
+position:absolute;
+top:0;
+}
+
+#linea{
+width: 100%;
+height: 2px;
+background-color: #000;
+}
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+#container{
+   width: 100%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   background-color: #000;
+}
+
+.h1{
+   text-align: center;
+   font-size: 12px;
+   font-family: arial;
+}
+#linea1{
+position: absolute;
+left: 30%;
+top: 5px;
+}
+
+a:link, a:visited, a:active,a:hover{
+   color: #f00;
+   text-decoration: none;
+}
+
+body{
+   background-color: #000;
+}
+
+#box{
+    width:50%;
+    height: 50%;
+    position: fixed;
+    top: 20%;
+    right:25%;
+    background-color: #fff;
+    border: solid thin #1654e0;
+}
+#box_regole{
+    width:50%;
+    height: 75%;
+    position: fixed;
+    top: 15%;
+    right:25%;
+    background-color: #fff;
+    border: solid thin #1654e0;
+}
+
+input {
+width: 15em;
+padding: .5em;
+color: #ffffff;
+text-shadow: 1px 1px 1px #000;
+border: solid thin #000;
+-webkit-border-radius: .7em;
+-moz-border-radius: .7em;
+border-radius: .7em;
+-webkit-box-shadow: 2px 2px 3px #000;
+box-shadow: 2px 2px 3px #000;
+background-color: #ce401c;
+background-image: -webkit-gradient(linear, left top, left bottom,
+ from(#036bdf), to(#0e56f9),color-stop(0.4, #1654e0));
+}
