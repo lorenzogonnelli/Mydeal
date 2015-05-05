@@ -1,4 +1,4 @@
-<?php  $conn = mysql_connect("", "", "");
+<?php  $conn = mysql_connect("HOST", "USER", "PASSWORD");
 
 
   if(!$conn)
