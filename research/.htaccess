@@ -1,0 +1,5 @@
+AuthName "Configuration page ^-^" 
+AuthType Basic 
+AuthUserFile /var/www/vhosts/mytito.it/httpdocs/research/.htpasswd
+AuthGroupFile /dev/null
+Require valid-user

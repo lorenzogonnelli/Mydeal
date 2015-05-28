@@ -1,3 +1,4 @@
+<?php
   session_start();
   require_once("header.php"); 
   require_once("config.php"); //login al db
@@ -50,5 +51,4 @@ Sconosciuto: <input type="radio" name="scelta" value="sconosciuto"><br />
 <?php
   require_once("footer.php"); 
 ?>
-
 

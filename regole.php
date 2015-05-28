@@ -1,9 +1,10 @@
-﻿<?php
+<?php
   session_start();
   require_once("header.php"); 
   require_once("config.php"); //login al db
   ?>
 <div id="box_regole">
+<b>
 <?php
   $guid=$_SESSION['guid'];
   $comando="SELECT * FROM `users` WHERE `guid`='$guid'";
@@ -11,6 +12,22 @@
   while($row=mysql_fetch_array($result)){
   	$iduser=$row['idusers'];
   }
+  
+
+$mittente = 'From: "Mydeal game" <help@mytito.it> \r\n'; 
+$destinatario = "team@mytito.it";
+$oggetto = "email di prova";
+$corpo="funziona";
+//$mittente=$guid." @mytito.it";
+$result=mail($destinatario,$oggetto,$corpo,$mittente);
+if ($result){
+	echo "mail inviata con successo da ".$mittente; 
+}  
+else
+{
+	echo "errore nell'inviare la mail";
+}
+
 $query2="SELECT * FROM `detgame` WHERE `guid`='$guid';";
 $result2=mysql_query($query2) or die("Errore query detgame");
   if($iduser%2==0){
@@ -40,7 +57,9 @@ $result2=mysql_query($query2) or die("Errore query detgame");
 	echo "SEI UN SENDER";
   }
 ?>
+</b>
 <!--*********************************************************************-->
+<p>&nbsp;</p>
 <p>Ecco le <b>regole:</b></p>
 <p>Il sistema ti assegnerà automaticamente un ruolo su MyDeal, potrai essere un <b>SENDER</b> o un <b>RECEIVER</b>, in seguito il sistema ti accoppierà automaticamente con un altro giocatore registrato a MyDeal, in modo anonimo. </p>
 Potrai essere accoppiato in modo casuale con “<b>un amico</b>”, “<b>un amico di amico</b>” o “<b>uno sconosciuto</b>”. L'ammontare dei gettoni finali quindi sarà determinato dalle decisioni di entrambi i giocatori effettuate durante la partita.</p>
@@ -51,6 +70,8 @@ Potrai essere accoppiato in modo casuale con “<b>un amico</b>”, “<b>un ami
 <p> &nbsp;&nbsp;&nbsp&nbsp;</p>es. “SENDER” dà <b>5 gettoni</b> a “RECEIVER”. “RECEIVER” riceve <b>15 gettoni</b>.  </p>
 <p>Adesso deciderai quanti gettoni tenerti ed eventualmente quanti gettoni dare indietro all’altro giocatore. Potrai dare indietro al tuo partner quanti gettoni vuoi, naturalmente puoi decidere anche di non dare indietro niente oppure di dare indietro tutti i gettoni ricevuti.</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p><form action="amici.php">
 	<input type="submit" value="Partecipanti">
 </form></p>
@@ -58,4 +79,5 @@ Potrai essere accoppiato in modo casuale con “<b>un amico</b>”, “<b>un ami
 <?php
   require_once("footer.php"); 
 ?>
+
 
